@@ -19,6 +19,10 @@
 		82464B5C17FCE74600EC1201 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82464B4417FCE74500EC1201 /* UIKit.framework */; };
 		82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82464B6217FCE74600EC1201 /* InfoPlist.strings */; };
 		82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B6517FCE74600EC1201 /* OpenReederTests.m */; };
+		82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B7017FCE7B700EC1201 /* ORLoginViewController.m */; };
+		82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */; };
+		82464B7817FD0D5400EC1201 /* ORCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */; };
+		82464B7917FD0D5400EC1201 /* ORCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,12 @@
 		82464B6117FCE74600EC1201 /* OpenReederTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenReederTests-Info.plist"; sourceTree = "<group>"; };
 		82464B6317FCE74600EC1201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82464B6517FCE74600EC1201 /* OpenReederTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenReederTests.m; sourceTree = "<group>"; };
+		82464B6F17FCE7B700EC1201 /* ORLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORLoginViewController.h; sourceTree = "<group>"; };
+		82464B7017FCE7B700EC1201 /* ORLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORLoginViewController.m; sourceTree = "<group>"; };
+		82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORLoginViewController.xib; sourceTree = "<group>"; };
+		82464B7517FD0D5400EC1201 /* ORCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCategoriesViewController.h; sourceTree = "<group>"; };
+		82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCategoriesViewController.m; sourceTree = "<group>"; };
+		82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORCategoriesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 		82464B4617FCE74600EC1201 /* OpenReeder */ = {
 			isa = PBXGroup;
 			children = (
+				82464B7417FCE7DB00EC1201 /* Controllers */,
 				82464B4F17FCE74600EC1201 /* ORAppDelegate.h */,
 				82464B5017FCE74600EC1201 /* ORAppDelegate.m */,
 				82464B5217FCE74600EC1201 /* Images.xcassets */,
@@ -142,6 +153,19 @@
 				82464B6217FCE74600EC1201 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82464B7417FCE7DB00EC1201 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82464B6F17FCE7B700EC1201 /* ORLoginViewController.h */,
+				82464B7017FCE7B700EC1201 /* ORLoginViewController.m */,
+				82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */,
+				82464B7517FD0D5400EC1201 /* ORCategoriesViewController.h */,
+				82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */,
+				82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82464B4B17FCE74600EC1201 /* InfoPlist.strings in Resources */,
+				82464B7917FD0D5400EC1201 /* ORCategoriesViewController.xib in Resources */,
 				82464B5317FCE74600EC1201 /* Images.xcassets in Resources */,
+				82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82464B4D17FCE74600EC1201 /* main.m in Sources */,
+				82464B7817FD0D5400EC1201 /* ORCategoriesViewController.m in Sources */,
+				82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */,
 				82464B5117FCE74600EC1201 /* ORAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

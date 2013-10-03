@@ -7,13 +7,28 @@
 //
 
 #import "ORAppDelegate.h"
+#import "ORLoginViewController.h"
+#import "ORCategoriesViewController.h"
 
 @implementation ORAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+//    ORLoginViewController *loginViewController = [[ORLoginViewController alloc]init];
+    ORCategoriesViewController *categories = [[ORCategoriesViewController alloc]init];
+    UINavigationController *navigation = [[UINavigationController alloc]initWithRootViewController:categories];
+    self.window.rootViewController = navigation;
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    if ([defaults objectForKey:@"URL"] == nil) {
+//        self.window.rootViewController = loginViewController;
+//    }else{
+//        self.window.rootViewController = categories;
+//    }
+//    
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
