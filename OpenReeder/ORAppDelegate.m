@@ -9,6 +9,7 @@
 #import "ORAppDelegate.h"
 #import "ORLoginViewController.h"
 #import "ORCategoriesViewController.h"
+#import "ORFeedViewController.h"
 
 @implementation ORAppDelegate
 
@@ -16,11 +17,20 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-//    ORLoginViewController *loginViewController = [[ORLoginViewController alloc]init];
-    ORCategoriesViewController *categories = [[ORCategoriesViewController alloc]init];
-    UINavigationController *navigation = [[UINavigationController alloc]initWithRootViewController:categories];
-    self.window.rootViewController = navigation;
+    ORCategoriesViewController *categoriesVC = [[ORCategoriesViewController alloc]init];
+    ORFeedViewController *feedsVC = [[ORFeedViewController alloc]init];
+    ORLoginViewController *loginVC = [[ORLoginViewController alloc]init];
+    
+    UINavigationController *categoriesNC = [[UINavigationController alloc]initWithRootViewController:categoriesVC];
+    
+    categoriesVC.tabBarItem.image = [UIImage imageNamed:@"marked"];
+    feedsVC.tabBarItem.image = [UIImage imageNamed:@"archive"];
+    loginVC.tabBarItem.image = [UIImage imageNamed:@"Feeds"];
+    UITabBarController *selectTabBarVC = [[UITabBarController alloc]init];
+    selectTabBarVC.viewControllers = @[categoriesNC,feedsVC,loginVC];
+    self.window.rootViewController = selectTabBarVC;
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
 //    if ([defaults objectForKey:@"URL"] == nil) {
 //        self.window.rootViewController = loginViewController;
 //    }else{

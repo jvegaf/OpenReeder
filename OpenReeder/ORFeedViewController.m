@@ -1,53 +1,58 @@
 //
-//  ORCategoriesViewController.m
+//  ORFeedViewController.m
 //  OpenReeder
 //
 //  Created by JOSE VEGA on 04/10/13.
 //  Copyright (c) 2013 JOSE VEGA. All rights reserved.
 //
 
-#import "ORCategoriesViewController.h"
+#import "ORFeedViewController.h"
 
 
-@interface ORCategoriesViewController ()
+@interface ORFeedViewController ()
 
 @end
 
-@implementation ORCategoriesViewController
+@implementation ORFeedViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        _model = [[TTRSSModel alloc]init];
-        [_model startConnection];
-        _sessionID = _model.session_id;
-        NSLog(@"session ID: %@",self.sessionID);
-        [_model getCategoriesWithSessionID: self.sessionID];
-        _categories = [NSArray arrayWithArray:_model.categories];
-        for (TTRSSCategoryModel *cat in self.categories) {
-            NSLog(@"new catID: %d",cat.catID);
-        }
-        
-        
+        // Custom initialization
     }
     return self;
 }
 
+-(id)initWithStyle:(UITableViewStyle)style
+        categoryID:(NSInteger)aCatID
+         sessionID:(NSString *)aSessionID
+{
+    if (self = [super initWithStyle:style]) {
+        _sessionID = aSessionID;
+        _categoryID = aCatID;
+        _myfeeds = [[NSArray alloc]init];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.navigationItem.title = @"CATEGORIES";
-    
 
+    _myModel = [[TTRSSModel alloc]init];
+    [_myModel getFeedsWithSessionID:_sessionID catID:_categoryID];
+    self.myfeeds = [_myModel feeds];
+    
+    
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,8 +71,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+
     // Return the number of rows in the section.
-    return [_categories count];
+    return [self.myfeeds count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,9 +85,7 @@
     }
     
     // Configure the cell...
-    
-    
-    cell.textLabel.text = [[_categories objectAtIndex:indexPath.row]title];
+    cell.textLabel.text = [[self.myfeeds objectAtIndex:indexPath.row]title];
     
     return cell;
 }
@@ -125,36 +129,22 @@
 }
 */
 
-
-
+/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //test
-    NSLog(@"row selected: %d",indexPath.row);
-    
-    TTRSSCategoryModel *model = [_categories objectAtIndex:indexPath.row];
-    //test
-    NSLog(@"category selected: %@",model.title);
-    NSLog(@"cat ID selected: %d",model.catID);
+    // Navigation logic may go here, for example:
     // Create the next view controller.
-    ORFeedViewController *feedsVC = [[ORFeedViewController alloc]initWithStyle:UITableViewStylePlain
-                                                                    categoryID:model.catID
-                                                                     sessionID:self.sessionID];
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+
+    // Pass the selected object to the new view controller.
+    
     // Push the view controller.
-    [self.navigationController pushViewController:feedsVC animated:YES];
-    
-    
-    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
-
-
-
-
-
-
-
+ 
+ */
 
 @end

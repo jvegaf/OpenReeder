@@ -21,8 +21,22 @@
 		82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B6517FCE74600EC1201 /* OpenReederTests.m */; };
 		82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B7017FCE7B700EC1201 /* ORLoginViewController.m */; };
 		82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */; };
-		82464B7817FD0D5400EC1201 /* ORCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */; };
-		82464B7917FD0D5400EC1201 /* ORCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */; };
+		8282F64A17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64117FD8AA7000CA583 /* TTRSSArticleModel.m */; };
+		8282F64B17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64117FD8AA7000CA583 /* TTRSSArticleModel.m */; };
+		8282F64C17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64317FD8AA7000CA583 /* TTRSSCategoryModel.m */; };
+		8282F64D17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64317FD8AA7000CA583 /* TTRSSCategoryModel.m */; };
+		8282F64E17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64517FD8AA7000CA583 /* TTRSSFeedModel.m */; };
+		8282F64F17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64517FD8AA7000CA583 /* TTRSSFeedModel.m */; };
+		8282F65017FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64717FD8AA7000CA583 /* TTRSSHeadlinesModel.m */; };
+		8282F65117FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64717FD8AA7000CA583 /* TTRSSHeadlinesModel.m */; };
+		8282F65217FD8AA7000CA583 /* TTRSSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64917FD8AA7000CA583 /* TTRSSModel.m */; };
+		8282F65317FD8AA7000CA583 /* TTRSSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282F64917FD8AA7000CA583 /* TTRSSModel.m */; };
+		82C2EA9917FE3EB800358070 /* ORCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2EA9717FE3EB800358070 /* ORCategoriesViewController.m */; };
+		82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2EA9817FE3EB800358070 /* ORCategoriesViewController.xib */; };
+		82C2EA9E17FE40B500358070 /* ORFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2EA9C17FE40B500358070 /* ORFeedViewController.m */; };
+		82C2EA9F17FE40B500358070 /* ORFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2EA9C17FE40B500358070 /* ORFeedViewController.m */; };
+		82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */; };
+		82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +69,22 @@
 		82464B6F17FCE7B700EC1201 /* ORLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORLoginViewController.h; sourceTree = "<group>"; };
 		82464B7017FCE7B700EC1201 /* ORLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORLoginViewController.m; sourceTree = "<group>"; };
 		82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORLoginViewController.xib; sourceTree = "<group>"; };
-		82464B7517FD0D5400EC1201 /* ORCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCategoriesViewController.h; sourceTree = "<group>"; };
-		82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCategoriesViewController.m; sourceTree = "<group>"; };
-		82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORCategoriesViewController.xib; sourceTree = "<group>"; };
+		8282F64017FD8AA7000CA583 /* TTRSSArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRSSArticleModel.h; sourceTree = "<group>"; };
+		8282F64117FD8AA7000CA583 /* TTRSSArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRSSArticleModel.m; sourceTree = "<group>"; };
+		8282F64217FD8AA7000CA583 /* TTRSSCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRSSCategoryModel.h; sourceTree = "<group>"; };
+		8282F64317FD8AA7000CA583 /* TTRSSCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRSSCategoryModel.m; sourceTree = "<group>"; };
+		8282F64417FD8AA7000CA583 /* TTRSSFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRSSFeedModel.h; sourceTree = "<group>"; };
+		8282F64517FD8AA7000CA583 /* TTRSSFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRSSFeedModel.m; sourceTree = "<group>"; };
+		8282F64617FD8AA7000CA583 /* TTRSSHeadlinesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRSSHeadlinesModel.h; sourceTree = "<group>"; };
+		8282F64717FD8AA7000CA583 /* TTRSSHeadlinesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRSSHeadlinesModel.m; sourceTree = "<group>"; };
+		8282F64817FD8AA7000CA583 /* TTRSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRSSModel.h; sourceTree = "<group>"; };
+		8282F64917FD8AA7000CA583 /* TTRSSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRSSModel.m; sourceTree = "<group>"; };
+		82C2EA9617FE3EB800358070 /* ORCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCategoriesViewController.h; sourceTree = "<group>"; };
+		82C2EA9717FE3EB800358070 /* ORCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCategoriesViewController.m; sourceTree = "<group>"; };
+		82C2EA9817FE3EB800358070 /* ORCategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORCategoriesViewController.xib; sourceTree = "<group>"; };
+		82C2EA9B17FE40B500358070 /* ORFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORFeedViewController.h; sourceTree = "<group>"; };
+		82C2EA9C17FE40B500358070 /* ORFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFeedViewController.m; sourceTree = "<group>"; };
+		82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORFeedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +144,7 @@
 		82464B4617FCE74600EC1201 /* OpenReeder */ = {
 			isa = PBXGroup;
 			children = (
+				8282F63F17FD7A94000CA583 /* Models */,
 				82464B7417FCE7DB00EC1201 /* Controllers */,
 				82464B4F17FCE74600EC1201 /* ORAppDelegate.h */,
 				82464B5017FCE74600EC1201 /* ORAppDelegate.m */,
@@ -161,11 +189,31 @@
 				82464B6F17FCE7B700EC1201 /* ORLoginViewController.h */,
 				82464B7017FCE7B700EC1201 /* ORLoginViewController.m */,
 				82464B7117FCE7B700EC1201 /* ORLoginViewController.xib */,
-				82464B7517FD0D5400EC1201 /* ORCategoriesViewController.h */,
-				82464B7617FD0D5400EC1201 /* ORCategoriesViewController.m */,
-				82464B7717FD0D5400EC1201 /* ORCategoriesViewController.xib */,
+				82C2EA9617FE3EB800358070 /* ORCategoriesViewController.h */,
+				82C2EA9717FE3EB800358070 /* ORCategoriesViewController.m */,
+				82C2EA9817FE3EB800358070 /* ORCategoriesViewController.xib */,
+				82C2EA9B17FE40B500358070 /* ORFeedViewController.h */,
+				82C2EA9C17FE40B500358070 /* ORFeedViewController.m */,
+				82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8282F63F17FD7A94000CA583 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8282F64017FD8AA7000CA583 /* TTRSSArticleModel.h */,
+				8282F64117FD8AA7000CA583 /* TTRSSArticleModel.m */,
+				8282F64217FD8AA7000CA583 /* TTRSSCategoryModel.h */,
+				8282F64317FD8AA7000CA583 /* TTRSSCategoryModel.m */,
+				8282F64417FD8AA7000CA583 /* TTRSSFeedModel.h */,
+				8282F64517FD8AA7000CA583 /* TTRSSFeedModel.m */,
+				8282F64617FD8AA7000CA583 /* TTRSSHeadlinesModel.h */,
+				8282F64717FD8AA7000CA583 /* TTRSSHeadlinesModel.m */,
+				8282F64817FD8AA7000CA583 /* TTRSSModel.h */,
+				8282F64917FD8AA7000CA583 /* TTRSSModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82464B4B17FCE74600EC1201 /* InfoPlist.strings in Resources */,
-				82464B7917FD0D5400EC1201 /* ORCategoriesViewController.xib in Resources */,
+				82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */,
 				82464B5317FCE74600EC1201 /* Images.xcassets in Resources */,
 				82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */,
+				82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */,
+				82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8282F64C17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
+				8282F64A17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */,
 				82464B4D17FCE74600EC1201 /* main.m in Sources */,
-				82464B7817FD0D5400EC1201 /* ORCategoriesViewController.m in Sources */,
+				8282F65217FD8AA7000CA583 /* TTRSSModel.m in Sources */,
+				8282F64E17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
 				82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */,
+				8282F65017FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
+				82C2EA9917FE3EB800358070 /* ORCategoriesViewController.m in Sources */,
 				82464B5117FCE74600EC1201 /* ORAppDelegate.m in Sources */,
+				82C2EA9E17FE40B500358070 /* ORFeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C2EA9F17FE40B500358070 /* ORFeedViewController.m in Sources */,
+				8282F65317FD8AA7000CA583 /* TTRSSModel.m in Sources */,
+				8282F65117FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
+				8282F64F17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
+				8282F64D17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
 				82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */,
+				8282F64B17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +532,7 @@
 				82464B6B17FCE74600EC1201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82464B6C17FCE74600EC1201 /* Build configuration list for PBXNativeTarget "OpenReederTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +541,7 @@
 				82464B6E17FCE74600EC1201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
