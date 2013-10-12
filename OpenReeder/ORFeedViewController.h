@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TTRSSModel.h"
+#import "ORArticleListViewController.h"
+#import "TTRSSFeedModel.h"
 
 @interface ORFeedViewController : UITableViewController
 
@@ -15,6 +17,7 @@
 @property (nonatomic) NSInteger categoryID;
 @property (nonatomic,strong) TTRSSModel *myModel;
 @property (nonatomic,strong) NSArray *myfeeds;
+
 
 -(id)initWithStyle:(UITableViewStyle)style
         categoryID:(NSInteger)aCatID

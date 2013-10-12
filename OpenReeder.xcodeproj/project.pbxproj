@@ -37,6 +37,10 @@
 		82C2EA9F17FE40B500358070 /* ORFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C2EA9C17FE40B500358070 /* ORFeedViewController.m */; };
 		82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */; };
 		82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */; };
+		82D2D3A01808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */; };
+		82D2D3A11808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */; };
+		82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */; };
+		82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,9 @@
 		82C2EA9B17FE40B500358070 /* ORFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORFeedViewController.h; sourceTree = "<group>"; };
 		82C2EA9C17FE40B500358070 /* ORFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFeedViewController.m; sourceTree = "<group>"; };
 		82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORFeedViewController.xib; sourceTree = "<group>"; };
+		82D2D39D1808F7AF00DD0C9E /* ORArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORArticleListViewController.h; sourceTree = "<group>"; };
+		82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORArticleListViewController.m; sourceTree = "<group>"; };
+		82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORArticleListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +202,9 @@
 				82C2EA9B17FE40B500358070 /* ORFeedViewController.h */,
 				82C2EA9C17FE40B500358070 /* ORFeedViewController.m */,
 				82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */,
+				82D2D39D1808F7AF00DD0C9E /* ORArticleListViewController.h */,
+				82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */,
+				82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +304,7 @@
 			files = (
 				82464B4B17FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */,
+				82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
 				82464B5317FCE74600EC1201 /* Images.xcassets in Resources */,
 				82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */,
 				82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */,
@@ -306,6 +317,7 @@
 			files = (
 				82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */,
+				82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +336,7 @@
 				82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */,
 				8282F65017FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
 				82C2EA9917FE3EB800358070 /* ORCategoriesViewController.m in Sources */,
+				82D2D3A01808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */,
 				82464B5117FCE74600EC1201 /* ORAppDelegate.m in Sources */,
 				82C2EA9E17FE40B500358070 /* ORFeedViewController.m in Sources */,
 			);
@@ -333,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D2D3A11808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */,
 				82C2EA9F17FE40B500358070 /* ORFeedViewController.m in Sources */,
 				8282F65317FD8AA7000CA583 /* TTRSSModel.m in Sources */,
 				8282F65117FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,

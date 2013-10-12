@@ -1,54 +1,53 @@
 //
-//  ORFeedViewController.m
+//  ORArticleViewController.m
 //  OpenReeder
 //
-//  Created by JOSE VEGA on 04/10/13.
+//  Created by Jose on 10/12/13.
 //  Copyright (c) 2013 JOSE VEGA. All rights reserved.
 //
 
-#import "ORFeedViewController.h"
+#import "ORArticleListViewController.h"
 
-
-@interface ORFeedViewController ()
+@interface ORArticleListViewController ()
 
 @end
 
-@implementation ORFeedViewController
+@implementation ORArticleListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
 
 -(id)initWithStyle:(UITableViewStyle)style
-        categoryID:(NSInteger)aCatID
+            feedID:(NSInteger)aFeedID
          sessionID:(NSString *)aSessionID
 {
     if (self = [super initWithStyle:style]) {
         _sessionID = aSessionID;
-        _categoryID = aCatID;
-        _myfeeds = [[NSArray alloc]init];
+        _selectFeedID = aFeedID;
+        _articlesArray = [[NSArray alloc]init];
         
     }
     
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _model = [[TTRSSModel alloc]init];
+    [_model getHeadlinesWithSessionID:_sessionID FeedID:_selectFeedID];
+    _articlesArray = _model.headlines;
+    
+    NSLog(@"feed id: %d",_selectFeedID);
 
-    _myModel = [[TTRSSModel alloc]init];
-    [_myModel getFeedsWithSessionID:_sessionID catID:_categoryID];
-    self.myfeeds = [_myModel feeds];
-    
-    
-    
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -72,9 +71,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     // Return the number of rows in the section.
-    return [self.myfeeds count];
+    return _articlesArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,10 +84,10 @@
     }
     
     // Configure the cell...
+    TTRSSHeadlinesModel *hlModel = [_articlesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = hlModel.title;
     
-    
-    cell.textLabel.text = [[self.myfeeds objectAtIndex:indexPath.row]title];
-    
+
     
     return cell;
 }
@@ -133,7 +131,7 @@
 }
 */
 
-
+/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -141,19 +139,14 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    
-    TTRSSFeedModel *feedModel = [_myfeeds objectAtIndex:indexPath.row];
-    NSLog(@"feed title.....: %@",feedModel.title);
-    NSLog(@"feed id: %d",feedModel.orderID);
-    
-    ORArticleListViewController *articleList = [[ORArticleListViewController alloc]initWithStyle:UITableViewStylePlain feedID:feedModel.feedID sessionID:_sessionID];
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
 
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    [self.navigationController pushViewController:articleList animated:YES];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
  
-
+ */
 
 @end
