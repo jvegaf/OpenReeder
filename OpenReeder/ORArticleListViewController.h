@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TTRSSModel.h"
 #import "TTRSSHeadlinesModel.h"
+#import "ORArticleViewController.h"
 
 @interface ORArticleListViewController : UITableViewController
 

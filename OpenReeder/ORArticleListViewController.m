@@ -131,7 +131,7 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -139,14 +139,17 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
+    
+    TTRSSArticleModel *article = [self.articlesArray objectAtIndex:indexPath.row];
+    
+    ORArticleViewController *articleVC = [[ORArticleViewController alloc]initWithSessionID:self.sessionID articleID:article.articleID];
+    
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:articleVC animated:YES];
 }
  
- */
+
 
 @end

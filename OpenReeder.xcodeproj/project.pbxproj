@@ -41,6 +41,10 @@
 		82D2D3A11808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */; };
 		82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */; };
 		82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */; };
+		82D2D3A718090A4300DD0C9E /* ORArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */; };
+		82D2D3A818090A4300DD0C9E /* ORArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */; };
+		82D2D3A918090A4300DD0C9E /* ORArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */; };
+		82D2D3AA18090A4300DD0C9E /* ORArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,9 @@
 		82D2D39D1808F7AF00DD0C9E /* ORArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORArticleListViewController.h; sourceTree = "<group>"; };
 		82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORArticleListViewController.m; sourceTree = "<group>"; };
 		82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORArticleListViewController.xib; sourceTree = "<group>"; };
+		82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORArticleViewController.h; sourceTree = "<group>"; };
+		82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORArticleViewController.m; sourceTree = "<group>"; };
+		82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORArticleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +212,9 @@
 				82D2D39D1808F7AF00DD0C9E /* ORArticleListViewController.h */,
 				82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */,
 				82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */,
+				82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */,
+				82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */,
+				82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +284,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "JOSE VEGA";
 				TargetAttributes = {
+					82464B3C17FCE74500EC1201 = {
+						DevelopmentTeam = B4CLBB7X7F;
+					};
 					82464B5717FCE74600EC1201 = {
 						TestTargetID = 82464B3C17FCE74500EC1201;
 					};
@@ -305,6 +318,7 @@
 				82464B4B17FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */,
 				82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
+				82D2D3A918090A4300DD0C9E /* ORArticleViewController.xib in Resources */,
 				82464B5317FCE74600EC1201 /* Images.xcassets in Resources */,
 				82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */,
 				82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */,
@@ -315,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D2D3AA18090A4300DD0C9E /* ORArticleViewController.xib in Resources */,
 				82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */,
 				82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
@@ -332,6 +347,7 @@
 				8282F64A17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */,
 				82464B4D17FCE74600EC1201 /* main.m in Sources */,
 				8282F65217FD8AA7000CA583 /* TTRSSModel.m in Sources */,
+				82D2D3A718090A4300DD0C9E /* ORArticleViewController.m in Sources */,
 				8282F64E17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
 				82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */,
 				8282F65017FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
@@ -353,6 +369,7 @@
 				8282F64F17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
 				8282F64D17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
 				82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */,
+				82D2D3A818090A4300DD0C9E /* ORArticleViewController.m in Sources */,
 				8282F64B17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,10 +481,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenReeder/OpenReeder-Prefix.pch";
 				INFOPLIST_FILE = "OpenReeder/OpenReeder-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,10 +497,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenReeder/OpenReeder-Prefix.pch";
 				INFOPLIST_FILE = "OpenReeder/OpenReeder-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

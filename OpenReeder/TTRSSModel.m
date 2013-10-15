@@ -301,6 +301,8 @@
             //test
             NSLog(@"article content: %@",[article content]);
             NSLog(@"article link: %@",[article link]);
+            self.articleContent = [NSString stringWithString:[article content]];
+            
         }
         
        

@@ -36,6 +36,7 @@
 @property (nonatomic,strong) NSMutableArray *feeds;
 @property (nonatomic,strong) NSMutableArray *headlines;
 @property (nonatomic,strong) NSMutableArray *articleObject;
+@property (nonatomic,copy) NSString *articleContent;
 
 
 

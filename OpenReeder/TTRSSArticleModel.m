@@ -47,9 +47,10 @@
 
 -(NSString *)formatedContent:(NSString *)preContent
 {
-    NSArray *stringsArray = @[@"<html><head></head><body>",preContent,@"</body></html>"];
+    NSArray *stringsArray = @[@"<html><head></head><body><font face=\"Helvetica\">",preContent,@"</font></body></html>"];
     NSString *finalContent = [stringsArray componentsJoinedByString:@""];
-    NSLog(@"Final content:%@",finalContent);
+    //test
+    //NSLog(@"Final content:%@",finalContent);
     return finalContent;
 }
 
