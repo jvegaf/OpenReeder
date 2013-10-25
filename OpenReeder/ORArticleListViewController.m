@@ -42,11 +42,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //UINib *nib = [UINib nibWithNibName:@"ORArticleCustomCell" bundle:nil];
+    
+    //[[self tableView]registerNib:nib forCellReuseIdentifier:@"ORArticleCustomCell"];
+    
     _model = [[TTRSSModel alloc]init];
     [_model getHeadlinesWithSessionID:_sessionID FeedID:_selectFeedID];
     _articlesArray = _model.headlines;
     
-    NSLog(@"feed id: %d",_selectFeedID);
+    //NSLog(@"feed id: %d",_selectFeedID);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -77,18 +82,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     
+    NSString *uniqueIdentifier = @"ORArticleCustomCell";
     // Configure the cell...
     TTRSSHeadlinesModel *hlModel = [_articlesArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = hlModel.title;
+    //test
+    //NSLog(@"tv feedname: %@",hlModel.feedTitle);
+    //NSLog(@"tv article tit: %@",hlModel.title);
     
+    ORArticleCustomCell *cell = (ORArticleCustomCell *) [tableView dequeueReusableCellWithIdentifier:uniqueIdentifier];
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle]loadNibNamed:@"ORArticleCustomCell" owner:nil options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[ORArticleCustomCell class]]) {
+                cell = (ORArticleCustomCell *)currentObject;
+                break;
+            }
+        }
+    }
+    
+    cell.feedNameLabel.text = hlModel.feedTitle;
+    cell.titleLabel.text = hlModel.title;
 
-    
     return cell;
 }
 

@@ -10,6 +10,7 @@
 #import "TTRSSModel.h"
 #import "TTRSSHeadlinesModel.h"
 #import "ORArticleViewController.h"
+#import "ORArticleCustomCell.h"
 
 @interface ORArticleListViewController : UITableViewController
 

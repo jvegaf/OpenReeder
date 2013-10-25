@@ -45,6 +45,10 @@
 		82D2D3A818090A4300DD0C9E /* ORArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */; };
 		82D2D3A918090A4300DD0C9E /* ORArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */; };
 		82D2D3AA18090A4300DD0C9E /* ORArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */; };
+		A9C09BE41817579700DD2732 /* ORArticleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C09BE31817579700DD2732 /* ORArticleCustomCell.m */; };
+		A9C09BE51817579700DD2732 /* ORArticleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C09BE31817579700DD2732 /* ORArticleCustomCell.m */; };
+		A9C09BE7181757B900DD2732 /* ORArticleCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9C09BE6181757B900DD2732 /* ORArticleCustomCell.xib */; };
+		A9C09BE8181757B900DD2732 /* ORArticleCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9C09BE6181757B900DD2732 /* ORArticleCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,9 @@
 		82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORArticleViewController.h; sourceTree = "<group>"; };
 		82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORArticleViewController.m; sourceTree = "<group>"; };
 		82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORArticleViewController.xib; sourceTree = "<group>"; };
+		A9C09BE21817579700DD2732 /* ORArticleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORArticleCustomCell.h; sourceTree = "<group>"; };
+		A9C09BE31817579700DD2732 /* ORArticleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORArticleCustomCell.m; sourceTree = "<group>"; };
+		A9C09BE6181757B900DD2732 /* ORArticleCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORArticleCustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +222,9 @@
 				82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */,
 				82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */,
 				82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */,
+				A9C09BE21817579700DD2732 /* ORArticleCustomCell.h */,
+				A9C09BE31817579700DD2732 /* ORArticleCustomCell.m */,
+				A9C09BE6181757B900DD2732 /* ORArticleCustomCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C09BE7181757B900DD2732 /* ORArticleCustomCell.xib in Resources */,
 				82464B4B17FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */,
 				82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
@@ -332,6 +343,7 @@
 				82D2D3AA18090A4300DD0C9E /* ORArticleViewController.xib in Resources */,
 				82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */,
+				A9C09BE8181757B900DD2732 /* ORArticleCustomCell.xib in Resources */,
 				82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +367,7 @@
 				82D2D3A01808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */,
 				82464B5117FCE74600EC1201 /* ORAppDelegate.m in Sources */,
 				82C2EA9E17FE40B500358070 /* ORFeedViewController.m in Sources */,
+				A9C09BE41817579700DD2732 /* ORArticleCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +379,7 @@
 				82C2EA9F17FE40B500358070 /* ORFeedViewController.m in Sources */,
 				8282F65317FD8AA7000CA583 /* TTRSSModel.m in Sources */,
 				8282F65117FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
+				A9C09BE51817579700DD2732 /* ORArticleCustomCell.m in Sources */,
 				8282F64F17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
 				8282F64D17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
 				82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */,
