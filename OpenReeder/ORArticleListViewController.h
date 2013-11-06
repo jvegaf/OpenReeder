@@ -16,11 +16,13 @@
 
 @property (nonatomic,copy) NSString *sessionID;
 @property (nonatomic,strong) NSArray *articlesArray;
+@property (nonatomic,copy) NSString *feedName;
 @property (nonatomic,strong) TTRSSModel *model;
 @property (nonatomic) NSInteger selectFeedID;
 
 -(id)initWithStyle:(UITableViewStyle)style
             feedID:(NSInteger)aFeedID
+          feedName:(NSString *)aFeedName
          sessionID:(NSString *)aSessionID;
 
 @end

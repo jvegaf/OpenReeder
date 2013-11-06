@@ -212,14 +212,14 @@
         feeds = [[NSMutableArray alloc] init];
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         // test
-        NSLog(@"contents items: %d",[contents count]);
+        NSLog(@"contents items: %lu",[contents count]);
         for (NSDictionary *aFeeds in contents) {
             TTRSSFeedModel *feed = [[TTRSSFeedModel alloc] initWithDictionary:aFeeds];
             [feeds addObject:feed];
             NSLog(@"feed added: %@",[feed title]);
         }
         //test
-        NSLog(@"\n\n\n\n number of feeds: %d \n\n\n\n",[feeds count]);
+        NSLog(@"\n\n\n\n number of feeds: %lu \n\n\n\n",[feeds count]);
     }
     else {
         NSLog(@"Error: %@",error.localizedDescription);
@@ -249,7 +249,7 @@
         //NSLog(@"getHeadlines Dict = %@",JSONObjects);
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         //test
-        NSLog(@"content items: %d",[contents count]);
+        NSLog(@"content items: %lu",[contents count]);
         headlines = [[NSMutableArray alloc]init];
         
         for (NSDictionary *aHeadline in contents) {
@@ -257,10 +257,10 @@
             [headlines addObject:head];
             //test
             NSLog(@"headline title: %@",[head title]);
-            NSLog(@"articleID: %d",[head articleID]);
+            NSLog(@"articleID: %lu",[head articleID]);
         }
         //test
-        NSLog(@"\n\n\n\n number of headlines: %d \n\n\n\n",[headlines count]);
+        NSLog(@"\n\n\n\n number of headlines: %lu \n\n\n\n",[headlines count]);
         
         
     }
@@ -292,7 +292,7 @@
         //NSLog(@"article Dict = %@",JSONObjects);
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         //test
-        NSLog(@"content items: %d",[contents count]);
+        NSLog(@"content items: %lu",[contents count]);
         articleObject = [[NSMutableArray alloc]init];
         
         for (NSDictionary *aArticle in contents) {

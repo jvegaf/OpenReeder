@@ -37,7 +37,7 @@
 {
     return [self initWithAuthor:[aDict objectForKey:@"author"]
                        comments:[aDict objectForKey:@"comments"]
-                        content:[self formatedContent:[aDict objectForKey:@"content"]]
+                        content:[self formatedContent:[aDict objectForKey:@"content"] withTitle:[aDict objectForKey:@"title"]]
                          feedID:[[aDict objectForKey:@"feed_id"]intValue]
                       feedTitle:[aDict objectForKey:@"feed_title"]
                       articleID:[[aDict objectForKey:@"id"]intValue]
@@ -45,9 +45,9 @@
                           title:[aDict objectForKey:@"title"]];
 }
 
--(NSString *)formatedContent:(NSString *)preContent
+-(NSString *)formatedContent:(NSString *)preContent withTitle:(NSString *)aTitle
 {
-    NSArray *stringsArray = @[@"<html><head><style type=\"text/css\">#contenedor img {max-width:300px;}</style></head><body><font face=\"Helvetica\"><div id=\"contenedor\">",preContent,@"</div></font></body></html>"];
+    NSArray *stringsArray = @[@"<html><head><style type=\"text/css\">#contenedor img {max-width:300px;}</style></head><body><font face=\"Helvetica\"><div id=\"contenedor\"><p><h2><center>",aTitle,@"</center></h2></p>",preContent,@"</div></font></body></html>"];
     NSString *finalContent = [stringsArray componentsJoinedByString:@""];
     //test
     NSLog(@"Final content:%@",finalContent);

@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" paginationBreakingMode="column" translatesAutoresizingMaskIntoConstraints="NO" id="1kC-pc-6EY">
+                <webView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" paginationMode="topToBottom" paginationBreakingMode="column" translatesAutoresizingMaskIntoConstraints="NO" id="1kC-pc-6EY">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>

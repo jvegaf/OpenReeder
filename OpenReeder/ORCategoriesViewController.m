@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"CATEGORIES";
+    self.navigationItem.title = @"Categories";
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -142,6 +142,7 @@
     // Create the next view controller.
     ORFeedViewController *feedsVC = [[ORFeedViewController alloc]initWithStyle:UITableViewStylePlain
                                                                     categoryID:model.catID
+                                                                  categoryName:model.title
                                                                      sessionID:self.sessionID];
     // Push the view controller.
     [self.navigationController pushViewController:feedsVC animated:YES];

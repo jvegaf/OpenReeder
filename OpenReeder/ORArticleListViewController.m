@@ -25,11 +25,13 @@
 
 -(id)initWithStyle:(UITableViewStyle)style
             feedID:(NSInteger)aFeedID
+          feedName:(NSString *)aFeedName
          sessionID:(NSString *)aSessionID
 {
     if (self = [super initWithStyle:style]) {
         _sessionID = aSessionID;
         _selectFeedID = aFeedID;
+        _feedName = aFeedName;
         _articlesArray = [[NSArray alloc]init];
         
     }
@@ -50,6 +52,8 @@
     _model = [[TTRSSModel alloc]init];
     [_model getHeadlinesWithSessionID:_sessionID FeedID:_selectFeedID];
     _articlesArray = _model.headlines;
+    
+    self.navigationItem.title = self.feedName;
     
     //NSLog(@"feed id: %d",_selectFeedID);
 

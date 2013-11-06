@@ -26,9 +26,9 @@
     categoriesVC.tabBarItem.image = [UIImage imageNamed:@"marked"];
     feedsVC.tabBarItem.image = [UIImage imageNamed:@"archive"];
     loginVC.tabBarItem.image = [UIImage imageNamed:@"Feeds"];
-    UITabBarController *selectTabBarVC = [[UITabBarController alloc]init];
-    selectTabBarVC.viewControllers = @[categoriesNC,feedsVC,loginVC];
-    self.window.rootViewController = selectTabBarVC;
+//    UITabBarController *selectTabBarVC = [[UITabBarController alloc]init];
+//    selectTabBarVC.viewControllers = @[categoriesNC,feedsVC,loginVC];
+    self.window.rootViewController = categoriesNC;
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
 //    if ([defaults objectForKey:@"URL"] == nil) {

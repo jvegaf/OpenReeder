@@ -26,11 +26,13 @@
 
 -(id)initWithStyle:(UITableViewStyle)style
         categoryID:(NSInteger)aCatID
+      categoryName:(NSString *)aCatName
          sessionID:(NSString *)aSessionID
 {
     if (self = [super initWithStyle:style]) {
         _sessionID = aSessionID;
         _categoryID = aCatID;
+        _categoryName = aCatName;
         _myfeeds = [[NSArray alloc]init];
         
     }
@@ -42,11 +44,12 @@
 {
     [super viewDidLoad];
 
+
     _myModel = [[TTRSSModel alloc]init];
     [_myModel getFeedsWithSessionID:_sessionID catID:_categoryID];
     self.myfeeds = [_myModel feeds];
     
-    
+    self.navigationItem.title = self.categoryName;
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -146,7 +149,7 @@
     NSLog(@"feed title.....: %@",feedModel.title);
     NSLog(@"feed id: %d",feedModel.orderID);
     
-    ORArticleListViewController *articleList = [[ORArticleListViewController alloc]initWithStyle:UITableViewStylePlain feedID:feedModel.feedID sessionID:_sessionID];
+    ORArticleListViewController *articleList = [[ORArticleListViewController alloc]initWithStyle:UITableViewStylePlain feedID:feedModel.feedID feedName:feedModel.title sessionID:_sessionID];
 
     // Pass the selected object to the new view controller.
     
