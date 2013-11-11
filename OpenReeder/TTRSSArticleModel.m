@@ -47,7 +47,7 @@
 
 -(NSString *)formatedContent:(NSString *)preContent withTitle:(NSString *)aTitle
 {
-    NSArray *stringsArray = @[@"<html><head><style type=\"text/css\">#contenedor img {max-width:300px;}</style></head><body><font face=\"Helvetica\"><div id=\"contenedor\"><p><h2><center>",aTitle,@"</center></h2></p>",preContent,@"</div></font></body></html>"];
+    NSArray *stringsArray = @[@"<html><head><meta name=\"viewport\" content=\"width=320\" /><style type=\"text/css\">#contenedor img {max-width:320px; margin-left:auto; margin-right:auto;}</style></head><body><font face=\"Helvetica Neue\"><div id=\"contenedor\"><p><h2><center>",aTitle,@"</center></h2></p>",preContent,@"</div></font></body></html>"];
     NSString *finalContent = [stringsArray componentsJoinedByString:@""];
     //test
     NSLog(@"Final content:%@",finalContent);

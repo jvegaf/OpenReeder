@@ -20,6 +20,10 @@
 -(id) init
 {
     if ((self = [super init])){
+        
+        self.defaults = [NSUserDefaults standardUserDefaults];
+
+        
         op = @"op";
         login = @"login";
         user = @"user";
@@ -35,7 +39,9 @@
         getArticle = @"getArticle";
         fetchData = @"fetchData";
         unsubscribeFeed = @"unsubscribeFeed";
-        url = [NSURL URLWithString:@"http://tosukapetaka.dyndns.info/tt-rss/api/"];
+        //url = [NSURL URLWithString:@"http://tosukapetaka.dyndns.info/tt-rss/api/"];
+        url = [NSURL URLWithString:[self.defaults objectForKey:@"URL"]];
+        NSLog(@"the final URL is %@",url);
     }
     return self;
 }
@@ -46,7 +52,7 @@
 {
     // prepare the dictionary
     keys = @[op,user,password];
-    objects = @[login,admin,admin];
+    objects = @[login,[self.defaults objectForKey:@"USERNAME"],[self.defaults objectForKey:@"PASSWORD"]];
     // create the d¡ctionary
     questionDict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     // transform to JSON
@@ -212,14 +218,14 @@
         feeds = [[NSMutableArray alloc] init];
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         // test
-        NSLog(@"contents items: %lu",[contents count]);
+        NSLog(@"contents items: %d",[contents count]);
         for (NSDictionary *aFeeds in contents) {
             TTRSSFeedModel *feed = [[TTRSSFeedModel alloc] initWithDictionary:aFeeds];
             [feeds addObject:feed];
-            NSLog(@"feed added: %@",[feed title]);
+            NSLog(@"feed added: %@ withID: %d",[feed title],[feed feedID]);
         }
         //test
-        NSLog(@"\n\n\n\n number of feeds: %lu \n\n\n\n",[feeds count]);
+        NSLog(@"\n\n\n\n number of feeds: %d \n\n\n\n",[feeds count]);
     }
     else {
         NSLog(@"Error: %@",error.localizedDescription);
@@ -249,7 +255,7 @@
         //NSLog(@"getHeadlines Dict = %@",JSONObjects);
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         //test
-        NSLog(@"content items: %lu",[contents count]);
+        NSLog(@"content items: %d",[contents count]);
         headlines = [[NSMutableArray alloc]init];
         
         for (NSDictionary *aHeadline in contents) {
@@ -257,10 +263,10 @@
             [headlines addObject:head];
             //test
             NSLog(@"headline title: %@",[head title]);
-            NSLog(@"articleID: %lu",[head articleID]);
+            NSLog(@"articleID: %d",[head articleID]);
         }
         //test
-        NSLog(@"\n\n\n\n number of headlines: %lu \n\n\n\n",[headlines count]);
+        NSLog(@"\n\n\n\n number of headlines: %d \n\n\n\n",[headlines count]);
         
         
     }
@@ -292,7 +298,7 @@
         //NSLog(@"article Dict = %@",JSONObjects);
         NSArray *contents = [JSONObjects objectForKey:@"content"];
         //test
-        NSLog(@"content items: %lu",[contents count]);
+        NSLog(@"content items: %d",[contents count]);
         articleObject = [[NSMutableArray alloc]init];
         
         for (NSDictionary *aArticle in contents) {
@@ -307,6 +313,38 @@
         
        
         
+        
+    }
+    else {
+        NSLog(@"Error: %@",error.localizedDescription);
+    }
+}
+
+-(void)getConfigWithSessionID:(NSString *)aSID
+{
+    keys = @[sid,op];
+    objects = @[aSID,@"getConfig"];
+    questionDict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:questionDict
+                                                       options:kNilOptions error:&error];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:jsonData];
+    NSURLResponse * response = [[NSURLResponse alloc] init];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (data != nil) {
+        //test
+        //NSLog(@"getHeadlines RESPONSE: %@\n\n\n\n",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);;
+        NSDictionary *JSONObjects = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        //test
+        NSLog(@"getConfig Dict = %@",JSONObjects);
+        NSArray *contents = [JSONObjects objectForKey:@"content"];
+        //test
+        NSLog(@"content items: %d",[contents count]);
+              
         
     }
     else {

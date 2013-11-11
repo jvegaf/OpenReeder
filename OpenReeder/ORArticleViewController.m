@@ -45,6 +45,7 @@
     [super viewDidLoad];
     [self.webView setDelegate:self];
     [self.webView loadHTMLString:self.content baseURL:nil];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -63,7 +64,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-
+    [webView.scrollView setContentSize: CGSizeMake(webView.frame.size.width, webView.scrollView.contentSize.height)];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

@@ -45,6 +45,13 @@
                          orderID:[[aDict objectForKey:@"order_id"]intValue]];
 }
 
+//-(UIImage *)feedIcon
+//{
+//    //averiguar la ruta http
+//    
+//    
+//}
+
 
 @end
 

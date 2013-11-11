@@ -17,15 +17,17 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    
     ORCategoriesViewController *categoriesVC = [[ORCategoriesViewController alloc]init];
-    ORFeedViewController *feedsVC = [[ORFeedViewController alloc]init];
-    ORLoginViewController *loginVC = [[ORLoginViewController alloc]init];
+//    ORFeedViewController *feedsVC = [[ORFeedViewController alloc]init];
+//    ORLoginViewController *loginVC = [[ORLoginViewController alloc]init];
     
     UINavigationController *categoriesNC = [[UINavigationController alloc]initWithRootViewController:categoriesVC];
     
-    categoriesVC.tabBarItem.image = [UIImage imageNamed:@"marked"];
-    feedsVC.tabBarItem.image = [UIImage imageNamed:@"archive"];
-    loginVC.tabBarItem.image = [UIImage imageNamed:@"Feeds"];
+    
+//    categoriesVC.tabBarItem.image = [UIImage imageNamed:@"marked"];
+//    feedsVC.tabBarItem.image = [UIImage imageNamed:@"archive"];
+//    loginVC.tabBarItem.image = [UIImage imageNamed:@"Feeds"];
 //    UITabBarController *selectTabBarVC = [[UITabBarController alloc]init];
 //    selectTabBarVC.viewControllers = @[categoriesNC,feedsVC,loginVC];
     self.window.rootViewController = categoriesNC;

@@ -13,8 +13,8 @@
 @property (nonatomic,retain)IBOutlet UITextField *urlTextField;
 @property (nonatomic,retain)IBOutlet UITextField *userNameTextField;
 @property (nonatomic,retain)IBOutlet UITextField *passwordTextField;
-@property (nonatomic,retain) NSUserDefaults *defaults;
 
+-(IBAction)isDone:(id)sender;
 
 
 @end

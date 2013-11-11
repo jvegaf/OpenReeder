@@ -10,11 +10,13 @@
 #import "TTRSSModel.h"
 #import "ORFeedViewController.h"
 #import "TTRSSCategoryModel.h"
+#import "ORLoginViewController.h"
 
 @interface ORCategoriesViewController : UITableViewController 
 
 @property (nonatomic,copy) NSString *sessionID;
 @property (nonatomic,strong) NSArray *categories;
 @property (nonatomic,strong) TTRSSModel *model;
+
 
 @end

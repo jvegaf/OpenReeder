@@ -32,4 +32,6 @@
 -(id)initWithDictionary:(NSDictionary *)aDict;
 
 
+//-(UIImage *)feedIcon;
+
 @end

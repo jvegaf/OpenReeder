@@ -37,7 +37,7 @@
 @property (nonatomic,strong) NSMutableArray *headlines;
 @property (nonatomic,strong) NSMutableArray *articleObject;
 @property (nonatomic,copy) NSString *articleContent;
-
+@property (nonatomic,weak) NSUserDefaults *defaults;
 
 
 
@@ -49,5 +49,6 @@
 -(void)getFeedsWithSessionID:(NSString *)aSID catID:(NSInteger)aCatID;
 -(void)getHeadlinesWithSessionID:(NSString *)aSID FeedID:(NSInteger)aFeedID;
 -(void)getArticleWithSessionID:(NSString *)aSID articleID:(NSInteger)aArticleID;
+-(void)getConfigWithSessionID:(NSString *)aSID;
 
 @end
