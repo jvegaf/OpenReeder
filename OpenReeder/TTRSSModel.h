@@ -10,22 +10,6 @@
 
 @interface TTRSSModel : NSObject
 
-@property (nonatomic,copy) NSString *op;
-@property (nonatomic,copy) NSString *login;
-@property (nonatomic,copy) NSString *user;
-@property (nonatomic,copy) NSString *password;
-@property (nonatomic,copy) NSString *admin;
-@property (nonatomic,copy) NSString *sid;
-@property (nonatomic,copy) NSString *isLoggedIn;
-@property (nonatomic,copy) NSString *logout;
-@property (nonatomic,copy) NSString *getUnread;
-@property (nonatomic,copy) NSString *getFeeds;
-@property (nonatomic,copy) NSString *getCategories;
-@property (nonatomic,copy) NSString *getHeadlines;
-@property (nonatomic,copy) NSString *getArticle;
-@property (nonatomic,copy) NSString *fetchData;
-@property (nonatomic,copy) NSString *unsubscribeFeed;
-
 @property (nonatomic,strong) NSArray *keys;
 @property (nonatomic,strong) NSArray *objects;
 @property (nonatomic,strong) NSDictionary *questionDict;
