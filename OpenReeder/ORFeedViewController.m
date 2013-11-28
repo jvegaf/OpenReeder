@@ -82,17 +82,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    NSString *uniqueIdentifier = @"ORFeedCustomCell";
+    // Configure the cell...
+    TTRSSFeedModel *model = [self.myfeeds objectAtIndex:indexPath.row];
+    //test
+    //NSLog(@"tv feedname: %@",hlModel.feedTitle);
+    //NSLog(@"tv article tit: %@",hlModel.title);
+    
+    ORFeedCustomCell *cell = (ORFeedCustomCell *) [tableView dequeueReusableCellWithIdentifier:uniqueIdentifier];
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle]loadNibNamed:@"ORFeedCustomCell" owner:nil options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[ORFeedCustomCell class]]) {
+                cell = (ORFeedCustomCell *)currentObject;
+                break;
+            }
+        }
     }
     
-    // Configure the cell...
-    
-    
-    cell.textLabel.text = [[self.myfeeds objectAtIndex:indexPath.row]title];
-    
+    cell.feedNameLabel.text = model.title;
     
     return cell;
 }

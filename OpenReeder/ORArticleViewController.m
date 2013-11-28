@@ -65,6 +65,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [webView.scrollView setContentSize: CGSizeMake(webView.frame.size.width, webView.scrollView.contentSize.height)];
+    //[webView.scrollView setContentSize: CGSizeMake(320, webView.frame.size.height)];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

@@ -11,6 +11,7 @@
 #import "ORFeedViewController.h"
 #import "TTRSSCategoryModel.h"
 #import "ORLoginViewController.h"
+#import "ORCategoriesCustomCell.h"
 
 @interface ORCategoriesViewController : UITableViewController 
 

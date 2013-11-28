@@ -109,16 +109,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    NSString *uniqueIdentifier = @"ORCategoriesCustomCell";
+    // Configure the cell...
+    TTRSSCategoryModel *model = [self.categories objectAtIndex:indexPath.row];
+    //test
+    //NSLog(@"tv feedname: %@",hlModel.feedTitle);
+    //NSLog(@"tv article tit: %@",hlModel.title);
+    
+    ORCategoriesCustomCell *cell = (ORCategoriesCustomCell *) [tableView dequeueReusableCellWithIdentifier:uniqueIdentifier];
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle]loadNibNamed:@"ORCategoriesCustomCell" owner:nil options:nil];
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[ORCategoriesCustomCell class]]) {
+                cell = (ORCategoriesCustomCell *)currentObject;
+                break;
+            }
+        }
     }
     
-    // Configure the cell...
-    
-    
-    cell.textLabel.text = [[_categories objectAtIndex:indexPath.row]title];
+    cell.CategoryName.text = model.title;
     
     return cell;
 }

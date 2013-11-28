@@ -10,6 +10,7 @@
 #import "TTRSSModel.h"
 #import "ORArticleListViewController.h"
 #import "TTRSSFeedModel.h"
+#import "ORFeedCustomCell.h"
 
 @interface ORFeedViewController : UITableViewController
 

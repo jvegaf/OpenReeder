@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8222F50E18384B9C000FBAF4 /* ORCategoriesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222F50D18384B9C000FBAF4 /* ORCategoriesCustomCell.m */; };
+		8222F50F18384B9C000FBAF4 /* ORCategoriesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222F50D18384B9C000FBAF4 /* ORCategoriesCustomCell.m */; };
+		8222F51218384BD7000FBAF4 /* ORFeedCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222F51118384BD7000FBAF4 /* ORFeedCustomCell.m */; };
+		8222F51318384BD7000FBAF4 /* ORFeedCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222F51118384BD7000FBAF4 /* ORFeedCustomCell.m */; };
+		8222F51518384C12000FBAF4 /* ORCategoriesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8222F51418384C12000FBAF4 /* ORCategoriesCustomCell.xib */; };
+		8222F51618384C12000FBAF4 /* ORCategoriesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8222F51418384C12000FBAF4 /* ORCategoriesCustomCell.xib */; };
+		8222F51818384C3E000FBAF4 /* ORFeedCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8222F51718384C3E000FBAF4 /* ORFeedCustomCell.xib */; };
+		8222F51918384C3E000FBAF4 /* ORFeedCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8222F51718384C3E000FBAF4 /* ORFeedCustomCell.xib */; };
 		82464B4117FCE74500EC1201 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82464B4017FCE74500EC1201 /* Foundation.framework */; };
 		82464B4317FCE74500EC1201 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82464B4217FCE74500EC1201 /* CoreGraphics.framework */; };
 		82464B4517FCE74600EC1201 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82464B4417FCE74500EC1201 /* UIKit.framework */; };
@@ -62,6 +70,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8222F50C18384B9C000FBAF4 /* ORCategoriesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCategoriesCustomCell.h; sourceTree = "<group>"; };
+		8222F50D18384B9C000FBAF4 /* ORCategoriesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCategoriesCustomCell.m; sourceTree = "<group>"; };
+		8222F51018384BD7000FBAF4 /* ORFeedCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORFeedCustomCell.h; sourceTree = "<group>"; };
+		8222F51118384BD7000FBAF4 /* ORFeedCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFeedCustomCell.m; sourceTree = "<group>"; };
+		8222F51418384C12000FBAF4 /* ORCategoriesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORCategoriesCustomCell.xib; sourceTree = "<group>"; };
+		8222F51718384C3E000FBAF4 /* ORFeedCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ORFeedCustomCell.xib; sourceTree = "<group>"; };
 		82464B3D17FCE74500EC1201 /* OpenReeder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenReeder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82464B4017FCE74500EC1201 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82464B4217FCE74500EC1201 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -213,18 +227,24 @@
 				82C2EA9617FE3EB800358070 /* ORCategoriesViewController.h */,
 				82C2EA9717FE3EB800358070 /* ORCategoriesViewController.m */,
 				82C2EA9817FE3EB800358070 /* ORCategoriesViewController.xib */,
+				8222F50C18384B9C000FBAF4 /* ORCategoriesCustomCell.h */,
+				8222F50D18384B9C000FBAF4 /* ORCategoriesCustomCell.m */,
+				8222F51418384C12000FBAF4 /* ORCategoriesCustomCell.xib */,
 				82C2EA9B17FE40B500358070 /* ORFeedViewController.h */,
 				82C2EA9C17FE40B500358070 /* ORFeedViewController.m */,
 				82C2EA9D17FE40B500358070 /* ORFeedViewController.xib */,
+				8222F51018384BD7000FBAF4 /* ORFeedCustomCell.h */,
+				8222F51118384BD7000FBAF4 /* ORFeedCustomCell.m */,
+				8222F51718384C3E000FBAF4 /* ORFeedCustomCell.xib */,
 				82D2D39D1808F7AF00DD0C9E /* ORArticleListViewController.h */,
 				82D2D39E1808F7AF00DD0C9E /* ORArticleListViewController.m */,
 				82D2D39F1808F7AF00DD0C9E /* ORArticleListViewController.xib */,
-				82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */,
-				82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */,
-				82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */,
 				A9C09BE21817579700DD2732 /* ORArticleCustomCell.h */,
 				A9C09BE31817579700DD2732 /* ORArticleCustomCell.m */,
 				A9C09BE6181757B900DD2732 /* ORArticleCustomCell.xib */,
+				82D2D3A418090A4300DD0C9E /* ORArticleViewController.h */,
+				82D2D3A518090A4300DD0C9E /* ORArticleViewController.m */,
+				82D2D3A618090A4300DD0C9E /* ORArticleViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -330,9 +350,11 @@
 				82C2EA9A17FE3EB800358070 /* ORCategoriesViewController.xib in Resources */,
 				82D2D3A21808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
 				82D2D3A918090A4300DD0C9E /* ORArticleViewController.xib in Resources */,
+				8222F51818384C3E000FBAF4 /* ORFeedCustomCell.xib in Resources */,
 				82464B5317FCE74600EC1201 /* Images.xcassets in Resources */,
 				82464B7317FCE7B700EC1201 /* ORLoginViewController.xib in Resources */,
 				82C2EAA017FE40B500358070 /* ORFeedViewController.xib in Resources */,
+				8222F51518384C12000FBAF4 /* ORCategoriesCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +365,10 @@
 				82D2D3AA18090A4300DD0C9E /* ORArticleViewController.xib in Resources */,
 				82464B6417FCE74600EC1201 /* InfoPlist.strings in Resources */,
 				82C2EAA117FE40B500358070 /* ORFeedViewController.xib in Resources */,
+				8222F51918384C3E000FBAF4 /* ORFeedCustomCell.xib in Resources */,
 				A9C09BE8181757B900DD2732 /* ORArticleCustomCell.xib in Resources */,
 				82D2D3A31808F7AF00DD0C9E /* ORArticleListViewController.xib in Resources */,
+				8222F51618384C12000FBAF4 /* ORCategoriesCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +382,12 @@
 				8282F64C17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
 				8282F64A17FD8AA7000CA583 /* TTRSSArticleModel.m in Sources */,
 				82464B4D17FCE74600EC1201 /* main.m in Sources */,
+				8222F50E18384B9C000FBAF4 /* ORCategoriesCustomCell.m in Sources */,
 				8282F65217FD8AA7000CA583 /* TTRSSModel.m in Sources */,
 				82D2D3A718090A4300DD0C9E /* ORArticleViewController.m in Sources */,
 				8282F64E17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
 				82464B7217FCE7B700EC1201 /* ORLoginViewController.m in Sources */,
+				8222F51218384BD7000FBAF4 /* ORFeedCustomCell.m in Sources */,
 				8282F65017FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
 				82C2EA9917FE3EB800358070 /* ORCategoriesViewController.m in Sources */,
 				82D2D3A01808F7AF00DD0C9E /* ORArticleListViewController.m in Sources */,
@@ -380,7 +406,9 @@
 				8282F65317FD8AA7000CA583 /* TTRSSModel.m in Sources */,
 				8282F65117FD8AA7000CA583 /* TTRSSHeadlinesModel.m in Sources */,
 				A9C09BE51817579700DD2732 /* ORArticleCustomCell.m in Sources */,
+				8222F51318384BD7000FBAF4 /* ORFeedCustomCell.m in Sources */,
 				8282F64F17FD8AA7000CA583 /* TTRSSFeedModel.m in Sources */,
+				8222F50F18384B9C000FBAF4 /* ORCategoriesCustomCell.m in Sources */,
 				8282F64D17FD8AA7000CA583 /* TTRSSCategoryModel.m in Sources */,
 				82464B6617FCE74600EC1201 /* OpenReederTests.m in Sources */,
 				82D2D3A818090A4300DD0C9E /* ORArticleViewController.m in Sources */,
