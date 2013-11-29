@@ -47,10 +47,12 @@
 
 -(NSString *)formatedContent:(NSString *)preContent withTitle:(NSString *)aTitle
 {
-    NSArray *stringsArray = @[@"<html><head><meta name=\"viewport\" content=\"width=320\"/><style type=\"text/css\">#contenedor img {max-width:320px; margin-left:-8; margin-right:auto; margin-top:10; margin-bottom:10}</style></head><body><font face=\"Helvetica Neue\"><div id=\"contenedor\"><p><h2><center>",aTitle,@"</center></h2></p>",preContent,@"</div></font></body></html>"];
+    
+    NSArray *stringsArray = @[@"<html><head><meta name=\"viewport\" content=\"width=320\"/><style type=\"text/css\">#contenedor img {max-width:320px; height:auto; margin-left:-8; margin-right:auto; margin-top:10; margin-bottom:10} #mainTitle {margin-top:30px; margin-bottom:80px;line-height:1.2;font-weight:lighter;} body{color:#5c5c5c;line-height:1.5;font-weight:lighter;font-size:110%;}a:link{color:#5c5c5c;}</style></head><body><font face=\"Helvetica Neue\"><h2><center><div id=\"mainTitle\">",aTitle,@"</div></center></h2><p></p><div id=\"contenedor\">",preContent,@"</div></font></body></html>"];
     NSString *finalContent = [stringsArray componentsJoinedByString:@""];
     //test
-    NSLog(@"Final content:%@",finalContent);
+    NSLog(@"\n\n\nFinal content:%@\n\n\n\n",finalContent);
+    
     return finalContent;
 }
 
