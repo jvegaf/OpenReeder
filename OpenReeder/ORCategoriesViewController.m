@@ -19,6 +19,16 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        _model = [[TTRSSModel alloc]init];
+        [_model startConnection];
+        _sessionID = _model.session_id;
+        NSLog(@"session ID: %@",self.sessionID);
+        [_model getCategoriesWithSessionID: self.sessionID];
+        _categories = [NSArray arrayWithArray:_model.categories];
+        //test 
+		for (TTRSSCategoryModel *cat in self.categories) {
+            NSLog(@"new catID: %d",cat.catID);
+        }
         
         
     }
@@ -30,27 +40,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Categories";
-    ORLoginViewController *loginVC = [[ORLoginViewController alloc] init];
-    UIBarButtonItem *settings = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(pushSettingsView)];
-    
-    [self.navigationItem setRightBarButtonItem:settings animated:YES];
-    
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if (![defaults objectForKey:@"URL"]) {
-        
-        [self.navigationController pushViewController:loginVC animated:YES];
-    }
-    
-    NSString *customURL = [defaults objectForKey:@"URL"];
-    
-    NSLog(@"URL from categories: %@",customURL);
-    
-//    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
-    
-//    self.refreshControl = refreshControl;
+    //self.navigationItem.title = @"CATEGORIES";
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -59,32 +49,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    if (![self.model session_id]){
-        _model = [[TTRSSModel alloc]init];
-        [_model startConnection];
-        _sessionID = _model.session_id;
-        NSLog(@"session ID: %@",self.sessionID);
-        [_model getConfigWithSessionID:self.sessionID];
-        [_model getCategoriesWithSessionID: self.sessionID];
-        _categories = [NSArray arrayWithArray:_model.categories];
-        for (TTRSSCategoryModel *cat in self.categories) {
-            NSLog(@"new catID: %d",cat.catID);
-        }
-    }else{
-        NSLog(@"Session ID = %@",[self.model session_id]);
-    }
-    
-}
-
-
--(void)pushSettingsView
-{
-    ORLoginViewController *loginVC = [[ORLoginViewController alloc]init];
-    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,26 +73,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *uniqueIdentifier = @"ORCategoriesCustomCell";
-    // Configure the cell...
-    TTRSSCategoryModel *model = [self.categories objectAtIndex:indexPath.row];
-    //test
-    //NSLog(@"tv feedname: %@",hlModel.feedTitle);
-    //NSLog(@"tv article tit: %@",hlModel.title);
-    
-    ORCategoriesCustomCell *cell = (ORCategoriesCustomCell *) [tableView dequeueReusableCellWithIdentifier:uniqueIdentifier];
-    
-    if (!cell) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle]loadNibNamed:@"ORCategoriesCustomCell" owner:nil options:nil];
-        for (id currentObject in topLevelObjects) {
-            if ([currentObject isKindOfClass:[ORCategoriesCustomCell class]]) {
-                cell = (ORCategoriesCustomCell *)currentObject;
-                break;
-            }
-        }
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.CategoryName.text = model.title;
+    // Configure the cell...
+    
+    
+    cell.textLabel.text = [[_categories objectAtIndex:indexPath.row]title];
     
     return cell;
 }
@@ -190,7 +144,8 @@
     ORFeedViewController *feedsVC = [[ORFeedViewController alloc]initWithStyle:UITableViewStylePlain
                                                                     categoryID:model.catID
                                                                   categoryName:model.title
-                                                                     sessionID:self.sessionID];
+                                                                     sessionID:_sessionID];
+
     // Push the view controller.
     [self.navigationController pushViewController:feedsVC animated:YES];
     

@@ -33,16 +33,16 @@
 -(void)startConnection
 {
     // prepare the dictionary
-    self.keys = @[@"op",@"user",@"password"];
-    self.objects = @[@"login",[self.defaults objectForKey:@"USERNAME"],[self.defaults objectForKey:@"PASSWORD"]];
-    // create the d¡ctionary
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{             @"op": @"login",
+                                        @"user":[_defaults objectForKey:@"USERNAME"],
+                                    @"password":[_defaults objectForKey:@"PASSWORD"]
+                                          };
     // transform to JSON
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
     // prepare the JSON request
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
@@ -78,13 +78,13 @@
 
 -(void)isLoggedInWithSessionID:(NSString *)aSID
 {
-    self.keys = @[@"sid",@"op"];
-    self.objects = @[aSID,@"isLoggedIn"];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{           @"sid": aSID,
+                                         @"op":@"isLoggedIn"
+                             };
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
@@ -103,13 +103,13 @@
 
 -(void)stopConectionWithSessionID:(NSString *)aSID
 {
-    self.keys = @[@"sid",@"op"];
-    self.objects = @[aSID,@"logout"];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{           @"sid": aSID,
+                                         @"op":@"logout"
+                             };
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
@@ -130,11 +130,13 @@
 
 -(void)getCategoriesWithSessionID:(NSString *)aSID
 {
-    self.keys = @[@"sid",@"op"];
-    self.objects = @[aSID,@"getCategories"];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+
+	NSDictionary *params = @{
+								@"sid":aSID,
+								@"op":@"getCategories"
+	};
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -178,11 +180,13 @@
 
 -(void)getFeedsWithSessionID:(NSString *)aSID catID:(NSInteger)aCatID
 {
-    self.keys = @[@"sid",@"op",@"cat_id"];
-    self.objects = @[aSID,@"getFeeds",[NSString stringWithFormat:@"%d",aCatID]];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+	NSDictionary *params = @{
+								@"sid":aSID,
+								@"op":@"getFeeds",
+								@"cat_id":[NSString stringWithFormat:@"%d",aCatID]
+	};
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -216,13 +220,16 @@
 
 -(void)getHeadlinesWithSessionID:(NSString *)aSID FeedID:(NSInteger)aFeedID
 {
-    self.keys = @[@"sid",@"op",@"feed_id",@"limit"];
-    self.objects = @[aSID,@"getHeadlines",[NSNumber numberWithInt:aFeedID],[NSNumber numberWithInt:50]];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{               @"sid": aSID,
+                                             @"op":@"getHeadlines",
+                                        @"feed_id":[NSNumber numberWithInt:aFeedID],
+                                          @"limit":@50
+                             };
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
-                                                       options:kNilOptions error:&error];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
+                                                       options:kNilOptions
+                                                         error:&error];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
@@ -259,13 +266,14 @@
 
 -(void)getArticleWithSessionID:(NSString *)aSID articleID:(NSInteger)aArticleID
 {
-    self.keys = @[@"sid",@"op",@"article_id"];
-    self.objects = @[aSID,@"getArticle",[NSNumber numberWithInt:aArticleID]];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{@"sid": aSID,
+                             @"op":@"getArticle",
+                             @"article_id":[NSNumber numberWithInt:aArticleID]
+                             };
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
@@ -300,13 +308,13 @@
 
 -(void)getConfigWithSessionID:(NSString *)aSID
 {
-    self.keys = @[@"sid",@"op"];
-    self.objects = @[aSID,@"getConfig"];
-    self.questionDict = [NSDictionary dictionaryWithObjects:self.objects forKeys:self.keys];
+    NSDictionary *params = @{           @"sid": aSID,
+                                         @"op":@"getConfig"
+                             };
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.questionDict
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params
                                                        options:kNilOptions error:&error];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
