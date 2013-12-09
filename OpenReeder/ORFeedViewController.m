@@ -35,6 +35,9 @@
         _categoryName = aCatName;
         _myfeeds = [[NSArray alloc]init];
         
+        _myModel = [[TTRSSModel alloc]init];
+        [_myModel getFeedsWithSessionID:_sessionID catID:_categoryID];
+        self.myfeeds = [_myModel feeds];
     }
     
     return self;
@@ -43,14 +46,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
-    _myModel = [[TTRSSModel alloc]init];
-    [_myModel getFeedsWithSessionID:_sessionID catID:_categoryID];
-    self.myfeeds = [_myModel feeds];
-    
     self.navigationItem.title = self.categoryName;
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -102,7 +98,6 @@
     }
     
     cell.feedNameLabel.text = model.title;
-    
     return cell;
 }
 

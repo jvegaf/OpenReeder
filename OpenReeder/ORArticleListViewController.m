@@ -34,6 +34,10 @@
         _feedName = aFeedName;
         _articlesArray = [[NSArray alloc]init];
         
+        _model = [[TTRSSModel alloc]init];
+        [_model getHeadlinesWithSessionID:_sessionID FeedID:_selectFeedID];
+        _articlesArray = _model.headlines;
+        
     }
     
     return self;
@@ -49,9 +53,7 @@
     
     //[[self tableView]registerNib:nib forCellReuseIdentifier:@"ORArticleCustomCell"];
     
-    _model = [[TTRSSModel alloc]init];
-    [_model getHeadlinesWithSessionID:_sessionID FeedID:_selectFeedID];
-    _articlesArray = _model.headlines;
+    
     
     self.navigationItem.title = self.feedName;
     
